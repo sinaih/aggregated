@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="16dp"
+    android:background="#BFD730"
+    tools:context="com.example.robot.aggregated.Markets">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:id="@+id/scrollView"
+        android:fadeScrollbars="false"
+        android:background="#77abd7"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="15dp">
+    <RadioGroup
+        android:id="@+id/market_radiogroup"
+        android:background="#77abd7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        ></RadioGroup></ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/next"
+        android:layout_below="@+id/scrollView"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="3dp"
+        android:background="#3071a9"
+        android:enabled="false"
+        android:onClick="next" />
+    <include layout="@layout/header"
+        android:id="@+id/header" />
+    <include layout="@layout/footer"
+        android:id="@+id/include" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kindly Select the Name of Market for Commodity Price Reporting and Click Next"
+        android:id="@+id/textView3"
+        android:textColor="#3071a9"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="62dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error"
+        android:layout_below="@+id/next"
+
+        android:gravity="center_horizontal"
+        android:textColor="#f14b1d"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:layout_marginTop="62dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@+id/scrollView"
+        android:id="@+id/button"
+        android:onClick="cancel"
+        android:paddingRight="25dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="25dp"
+        android:layout_toEndOf="@+id/next" />
+
+</RelativeLayout>
